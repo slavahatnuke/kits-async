@@ -4,7 +4,7 @@ Promise based async flow like [https://www.npmjs.com/package/kits](https://www.n
 ## Spec
 ```javascript
 const assert = require('assert');
-const Kit = require('kits/async');
+const Kit = require('kits-promisify');
 
 describe('Async Kit', () => {
     it('construct and get', () => {
