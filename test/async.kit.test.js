@@ -1,10 +1,5 @@
-# kits-promisify
-Promise based async flow like [https://www.npmjs.com/package/kits](https://www.npmjs.com/package/kits)
-
-## Spec
-```javascript
 const assert = require('assert');
-const Kit = require('kits/async');
+const Kit = require('..');
 
 describe('Async Kit', () => {
     it('construct and get', () => {
@@ -221,5 +216,23 @@ describe('Async Kit', () => {
                     });
             });
     })
+
+    it('keys', () => {
+        let kit = Kit({
+            User1: () => null,
+            Name1: () => 'OK'
+        });
+
+        assert.deepEqual(Object.keys(kit), [
+            'User1',
+            'Name1',
+            'set',
+            'add',
+            'get',
+            'create',
+            'remove',
+            'defineDecorator']
+        );
+    })
+
 });
-```
