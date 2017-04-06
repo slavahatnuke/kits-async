@@ -41,6 +41,10 @@ module.exports = class AsyncKit {
             }
 
             this.__kit.creators[name] = creator;
+        } else if (name instanceof Object && creator === undefined) {
+            for (let key in name) {
+                this.add(key, name[key])
+            }
         } else {
             throw new Error(`'${name}' : creator is not a function`)
         }

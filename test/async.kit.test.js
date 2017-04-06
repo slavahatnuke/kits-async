@@ -235,4 +235,14 @@ describe('Async Kit', () => {
         );
     })
 
+    it('add via object', () => {
+        let kit = Kit();
+
+        kit.add({name: () => 'slava'});
+
+        return kit.name.then((name) => assert.equal(name, 'slava'))
+
+
+    })
+
 });

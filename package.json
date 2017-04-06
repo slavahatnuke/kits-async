@@ -1,6 +1,6 @@
 {
   "name": "kits-promisify",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "kits-promisify",
   "main": "index.js",
   "directories": {
